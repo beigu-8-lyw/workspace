@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 课程要求原文
+    url: https://github.com/beigu-8-lyw/workspace/blob/main/docs/过程模型选型论证.md
+    about: 提交 Issue 前先确认过程模型与迭代节奏
+  - name: 协作规范
+    url: https://github.com/beigu-8-lyw/workspace/blob/main/CONTRIBUTING.md
+    about: 分支命名、提交信息、PR 流程

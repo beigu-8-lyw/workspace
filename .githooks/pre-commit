@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# 提交前拦截：中间产物、密钥、超大文件。
+# 启用：git config core.hooksPath .githooks && chmod +x .githooks/pre-commit
+set -euo pipefail
+
+if ! command -v python3 >/dev/null 2>&1; then
+  echo "⚠ 未找到 python3，跳过仓库卫生检查" >&2
+  exit 0
+fi
+
+python3 scripts/check_repo.py --staged

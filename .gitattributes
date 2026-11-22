@@ -1,0 +1,29 @@
+# 统一换行符，避免 Windows/macOS 混用导致整文件 diff
+* text=auto eol=lf
+
+# 源码与文档按文本处理（可 diff、可评审）
+*.md    text eol=lf
+*.py    text eol=lf
+*.js    text eol=lf
+*.ts    text eol=lf
+*.tsx   text eol=lf
+*.json  text eol=lf
+*.yml   text eol=lf
+*.yaml  text eol=lf
+*.puml  text eol=lf
+*.mmd   text eol=lf
+*.sql   text eol=lf
+
+# 二进制：不做换行转换，也不要在 diff 里展开
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.svg   text eol=lf
+*.pdf   binary
+*.docx  binary
+*.xlsx  binary
+*.pptx  binary
+
+# PlantUML 导出图在 GitHub 上折叠显示
+docs/**/*.png linguist-generated=true
